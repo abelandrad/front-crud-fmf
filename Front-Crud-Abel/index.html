@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gerenciamento</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+      <a href="#" class="logo">Gerenciamento de Clientes</a>
+  
+      <ul class="navlist">
+        <li><a id="adicionarLink">Adicionar</a></li>
+        <li><a id="editarLink">Editar</a></li>
+      </ul>
+  
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+  
+    <section class="home" id="home">
+      <div class="home-text">
+        <div class="slide">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Etnia</th>
+                <th>Gênero</th>
+                <th>CEP</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="clientesBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  
+    <section>
+      <div class="form-container hidden" id="cadastroFormContainer">
+        <form id="cadastroClienteForm">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required><br>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br>
+  
+          <label for="etnia">Etnia:</label>
+          <input type="text" id="etnia" name="etnia" required><br>
+  
+          <label for="genero">Gênero:</label>
+          <select id="genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select><br>
+  
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" required><br>
+  
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+  
+      <div class="form-editar-container hidden" id="editarFormContainer">
+        <form id="editarClienteForm">
+          <label for="id">ID:</label>
+          <input type="text" id="id" name="id" required><br>
+  
+          <label for="editar-nome">Nome:</label>
+          <input type="text" id="editar-nome" name="nome" required><br>
+  
+          <label for="editar-email">Email:</label>
+          <input type="email" id="editar-email" name="email" required><br>
+  
+          <label for="editar-etnia">Etnia:</label>
+          <input type="text" id="editar-etnia" name="etnia" required><br>
+  
+          <label for="editar-genero">Gênero:</label>
+          <select id="editar-genero" name="genero" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select><br>
+  
+          <label for="editar-cep">CEP:</label>
+          <input type="text" id="editar-cep" name="cep" required><br>
+  
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+    </section>
+  
+  <script src="script.js"></script>
+
+</body>
+
+</html>
